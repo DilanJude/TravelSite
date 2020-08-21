@@ -1,0 +1,105 @@
+/* Navigation Menu */
+.nav-menue a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+  .nav-menue a:hover {
+    background-color:black;
+    color: lightskyblue;
+  }
+  .nav-menue a.active {
+    background-color:black;
+    color: lightblue;
+  }
+
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: lightblue;
+    color: black;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  h3.visacurren
+  {
+   color: black;
+   display: block;
+   text-align: center;
+  }
+/* Styling for Table*/
+
+.table {
+    
+    width: 100%;    
+    margin-left:auto; 
+    margin-right:auto;
+    background-color: black;
+    border: 2px solid black;
+  }
+  table,th,td {
+          table-layout: fixed;
+          width:75%;
+          border-collapse: collapse;
+          max-width: width 75%;
+      }
+  th {
+           border: 2px solid black;
+          letter-spacing: 2px;
+      }
+      td {
+        border: 2px solid black;
+          letter-spacing: 1px;
+          text-align: center;
+      }
+      tfoot td {
+          text-align: center;
+      }
+      thead,tfoot{
+        align-content: center;
+  
+      }
+      tr:nth-of-type(2n){
+        border: 2px solid black;
+          background: lightskyblue;
+      }
+
+      mark { 
+        background-color: lightblue;
+        color: black;
+      }
+      section{
+        border:3px solid lightblue;
+        margin:10px;
+        padding:5px;
+    }
+
+    section.last{
+        background-color: lightblue;
+        margin:10px;    
+        padding:5px;
+    }
+   
+
+    .button23 {
+        background-color:green;
+        border: 3px;
+        border-color: black;
+        color: white;
+        padding: 16px 34px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }

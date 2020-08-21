@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Transport Services</title>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=auto">
+    <script type="text/javascript" src="scripts/main.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<div class="nav-menue">
+  <a href="homepage.html">Home</a>
+  <a href="Srilanka.html">Sri Lanka</a>
+  <a href="Attractionspage.html">Attractions</a>
+  <a href="Accomodationpage.html">Accomodation</a>
+  <a class="active"  href="Transportservicespage.html">Transportation</a>
+  <a href="Contactuspage.html">Contact Us</a>
+</div>
+<img src="images/transport.png" class="sublogo" alt="transport image">
+<br>
+<div class="heading-homepage">
+    <header>
+      <h1>Transport Services</h1>
+      <p>The Sri Lankan Travel Partner</p>
+    </header>
+  </div>
+    <body>
+         
+        	
+	<div class="container12">
+  
+        <div class="row">
+          <div class="col-25">
+            <label for="taxiType">Taxi type</label>
+          </div>
+          <div class="col-75">
+            <select id="taxiType" name="taxiType" onchange="taxiTypeChanged()">
+              <option value="">Select Taxi type</option>
+              <option value="Tuk Tuk">Tuk Tuk</option>
+              <option value="Mini Car">Mini Car</option>
+              <option value="Luxury Car">Luxury Car</option>
+              <option value="Luxury Van">Luxury Van</option>
+              <option value="Luxury Bus">Luxury Bus</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fuel">Fuel Efficiency</label>
+          </div>
+          <div class="col-75">
+            <select  name="fuel" id="Fuel" onchange="fuelEfficiencyChanged()">
+            <option value="">Select Fuel Efficiency</option>
+              <option value="High">High</option>
+              <option value="Medium">Medim(default)</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="stay">Stay</label>
+          </div>
+          <div class="col-75">
+            <select name="stay" id="Stay" onchange="stayChanged()">
+            <option value="One Way">Select Stay Type</option>
+              <option value="One Way">One Way</option>
+              <option value="Two Way">Two Way</option>
+              <option value="Over Night">Over night</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">Distance</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="Distance" name="distance" placeholder="Distance" onchange="currentDistanceChanged(this.value)">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Pick Up Location</label>
+          </div><br><br><br>
+          <div class="col-75">
+            <input type="text" id="location" name="location" placeholder="Pick Up Location">
+          </div>
+        </div>
+        
+        <div class="btnrow">
+          <input class="btn" type="submit" value="Order Favourite" onclick="getFromFavourite()">
+          <input class="btn" type="submit" value="Add to Favourite"  onclick="addFavourite()"> 
+          <input class="btn" type="submit" value="Reserve" onclick="reserve()">  
+          <input class="btn" type="submit" value="Add Order" onclick="addOrder()">
+      
+        </div>
+       
+      </div>
+      
+      <div class="row">
+      
+        <div class="tcolumn">
+        <h3 class="ttopic">Current reservation  </h3>
+            <label class = "label" for="currentTaxi" id="currentTaxi">Current Taxi : -</label><br>
+            <label class = "label" for="currentTaxi" id="fuelEfficiency">Fuel Efficiency : -</label><br>
+            <label class = "label" for="currentTaxi" id="StayCurrent">Stay : -</label><br>
+            <label class = "label"  id="currentDistance">Distance : 0</label><br>
+            <label class = "label" for="costofcurrent" id="currentCost">cost of current Taxi : 0</label>  <br>
+        </div>
+        
+        <div class="tcolumn">
+          <h3 class="ttopic">   Overall reservation</h3>
+              <label class = "label" for="overallOrder">All Taxi(s)</label><br>
+              <label class = "label" id="lbl1">.</label><br>
+              <label class = "label" for="overallOrder">Overall Cost</label><br>
+              <label class = "label" id="lbl2"> 0 </label><br>
+              <label class = "label" for="overallOrder">Total Distance</label><br>
+              <label class = "label" id="lbl3"> 0 </label>
+        </div>
+        
+      </div>
+
+     
+<footer>
+  <p>Cinnamon Travels © All Right Reserved. Designed by Dilan Jude | 077 2769 400<br>
+  <a href="cb008784@students.apiit.lk">For More Info</a></p>
+</footer>
+</body>
+</html>
